@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Case Details</title>
+
+</head>
+
+<body>
+
+<h1>
+Case Details
+</h1>
+
+{% if case %}
+
+<p>
+
+<strong>Case ID:</strong>
+
+{{ case.case_id }}
+
+</p>
+
+<p>
+
+<strong>Evidence Type:</strong>
+
+{{ case.evidence_type }}
+
+</p>
+
+<p>
+
+<strong>Status:</strong>
+
+{{ case.status }}
+
+</p>
+
+<p>
+
+<strong>Risk:</strong>
+
+{{ case.risk }}%
+
+</p>
+
+<p>
+
+<strong>Timestamp:</strong>
+
+{{ case.timestamp }}
+
+</p>
+<p>
+
+<strong>Name:</strong>
+
+{{ case.name or "N/A" }}
+
+</p>
+
+<p>
+
+<strong>Subject:</strong>
+
+{{ case.subject or "N/A" }}
+
+</p>
+
+<p>
+
+<strong>Submitted Mark:</strong>
+
+{{ case.submitted_mark or "N/A" }}
+
+</p>
+
+<p>
+
+<strong>Official Mark:</strong>
+
+{{ case.official_mark or "N/A" }}
+
+</p>
+<h2>QR Verification</h2>
+
+<p>
+<strong>QR Status:</strong>
+{{ case.qr_valid }}
+</p>
+
+<p>
+<strong>QR Mark:</strong>
+{{ case.qr_data.marks }}
+</p>
+
+{% else %}
+
+<p>
+
+Case Not Found
+
+</p>
+
+{% endif %}
+
+<br>
+
+<a href="/cases">
+
+Back To Cases
+
+</a>
+
+</body>
+
+</html>

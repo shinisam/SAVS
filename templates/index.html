@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AEGIS Dashboard</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            background:#f5f7fb;
+            margin:40px;
+        }
+
+        .container{
+            background:white;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 0 10px #ddd;
+        }
+
+        .card{
+            margin-top:20px;
+            padding:15px;
+            border:1px solid #ddd;
+            border-radius:8px;
+            background:#fafafa;
+        }
+
+        button{
+            padding:10px 20px;
+            background:#0078D4;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        img{
+            max-width:600px;
+            border:1px solid #ccc;
+            margin-top:10px;
+        }
+
+        .success{
+            color:green;
+            font-weight:bold;
+        }
+
+        .danger{
+            color:red;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AEGIS</h1>
+
+    <h3>
+        Academic Evidence Guard and Integrity System
+    </h3>
+
+    <form
+        action="/upload"
+        method="POST"
+        enctype="multipart/form-data">
+
+        <input
+            type="file"
+            name="image"
+            required>
+
+        <button type="submit">
+            Verify Evidence
+        </button>
+        <br>
+
+        <a href="/cases">
+
+        <button type="button">
+
+        View Investigation History
+
+        </button>
+
+        </a>
+    </form>
+
+    {% if case_id %}
+
+    <div class="card">
+
+        <h2>Case Information</h2>
+
+        <p>
+            <strong>Case ID:</strong>
+            {{ case_id }}
+        </p>
+
+        <p>
+            <strong>Timestamp:</strong>
+            {{ timestamp }}
+        </p>
+
+    </div>
+
+    {% endif %}
+
+    {% if evidence_type %}
+
+    <div class="card">
+
+        <h2>
+            Evidence Type:
+            {{ evidence_type }}
+        </h2>
+
+    </div>
+
+    {% endif %}
+
+    {% if image_name %}
+
+    <div class="card">
+
+        <h2>Uploaded Screenshot</h2>
+
+        <img
+        src="{{ url_for('static',
+        filename='uploads/' + image_name) }}">
+
+    </div>
+
+    {% endif %}
+
+    {% if metadata %}
+
+    <div class="card">
+
+        <h2>PDF Metadata</h2>
+
+        <p>
+            <strong>Author:</strong>
+            {{ metadata.author }}
+        </p>
+
+        <p>
+            <strong>Creator:</strong>
+            {{ metadata.creator }}
+        </p>
+
+        <p>
+            <strong>Producer:</strong>
+            {{ metadata.producer }}
+        </p>
+
+    </div>
+
+    {% endif %}
+
+    {% if parsed_data %}
+
+    <div class="card">
+
+        <h2>Extracted Information</h2>
+
+        <p>
+            <strong>Name:</strong>
+            {{ parsed_data.name }}
+        </p>
+
+        <p>
+            <strong>Subject:</strong>
+            {{ parsed_data.subject }}
+        </p>
+
+        <p>
+            <strong>Marks:</strong>
+            {{ parsed_data.marks }}
+        </p>
+
+    </div>
+
+    {% endif %}
+
+    {% if report %}
+
+    <div class="card">
+
+        <h2>Verification Report</h2>
+
+        {% if report.status == "AUTHENTIC" %}
+
+        <p class="success">
+            ✅ AUTHENTIC
+        </p>
+
+        {% else %}
+
+        <p class="danger">
+            🚨 TAMPERING SUSPECTED
+        </p>
+
+        {% endif %}
+
+        <p>
+            <strong>Status:</strong>
+            {{ report.status }}
+        </p>
+
+        <p>
+            <strong>Official Mark:</strong>
+            {{ report.official }}
+        </p>
+
+        <p>
+            <strong>Submitted Mark:</strong>
+            {{ parsed_data.marks }}
+        </p>
+
+        <p>
+            <strong>Verifier Score:</strong>
+            {{ report.score }}%
+        </p>
+
+    </div>
+
+    {% endif %}
+
+    {% if risk_score is not none %}
+
+    <div class="card">
+
+        <h2>Risk Assessment</h2>
+
+        <p>
+
+            Final Risk Score:
+
+            <strong>{{ risk_score }}%</strong>
+
+        </p>
+
+    </div>
+
+    {% endif %}
+
+    {% if report %}
+
+    <div class="card">
+
+        <h2>Evidence Summary</h2>
+
+        <ul>
+
+            <li>
+                Evidence Type:
+                {{ evidence_type }}
+            </li>
+
+            {% if evidence_type == "Screenshot" %}
+
+            <li>
+                OCR extraction completed
+            </li>
+
+            <li>
+                ELA forensic analysis completed
+            </li>
+
+            {% endif %}
+
+            {% if evidence_type == "PDF" %}
+
+            <li>
+                PDF text extraction completed
+            </li>
+
+            <li>
+                PDF metadata analysis completed
+            </li>
+
+            {% endif %}
+
+            <li>
+                Official database verification completed
+            </li>
+
+            {% if report.status == "TAMPERING SUSPECTED" %}
+
+            <li style="color:red;">
+                Mark mismatch detected
+            </li>
+
+            {% else %}
+
+            <li style="color:green;">
+                Marks match official records
+            </li>
+
+            {% endif %}
+
+        </ul>
+
+    </div>
+
+    {% endif %}
+
+    {% if ela_image %}
+
+    <div class="card">
+
+        <h2>Forensic Analysis (ELA)</h2>
+
+        <img
+        src="{{ url_for(
+            'static',
+            filename='uploads/ela_output.png'
+        ) }}">
+
+    </div>
+
+    {% endif %}
+{% if signature_valid is not none %}
+
+<div class="card">
+
+<h2>
+Digital Signature Analysis
+</h2>
+
+{% if signature_valid %}
+
+<p style="color:green;">
+✅ VALID SIGNATURE
+</p>
+
+{% else %}
+
+<p style="color:red;">
+❌ INVALID SIGNATURE
+</p>
+
+{% endif %}
+
+</div>
+
+{% endif %}    
+    {% if pdf_file %}
+
+    <div class="card">
+
+        <a
+        href="{{ url_for(
+            'static',
+            filename=pdf_file
+        ) }}"
+        download>
+
+            <button>
+                Download Forensic Report (PDF)
+            </button>
+
+        </a>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

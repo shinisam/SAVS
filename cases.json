@@ -1,0 +1,333 @@
+[
+    {
+        "case_id": "AEGIS-4D2677D3",
+        "evidence_type": "PDF",
+        "status": "AUTHENTIC",
+        "risk": 0,
+        "timestamp": "10-11-2026 13:53:59"
+    },
+    {
+        "case_id": "AEGIS-8C0CD008",
+        "evidence_type": "PDF",
+        "status": "TAMPERING SUSPECTED",
+        "risk": 60,
+        "timestamp": "10-11-2026 13:54:48"
+    },
+    {
+        "case_id": "AEGIS-032BF6EB",
+        "evidence_type": "Screenshot",
+        "status": "TAMPERING SUSPECTED",
+        "risk": 80,
+        "timestamp": "10-11-2026 14:58:44"
+    },
+    {
+        "case_id": "AEGIS-8DC41D36",
+        "evidence_type": "PDF",
+        "status": "TAMPERING SUSPECTED",
+        "risk": 60,
+        "timestamp": "10-11-2026 15:30:59"
+    },
+    {
+        "case_id": "AEGIS-6CC1EAFA",
+        "evidence_type": "PDF",
+        "status": "TAMPERING SUSPECTED",
+        "risk": 60,
+        "timestamp": "10-11-2026 15:31:06"
+    },
+    {
+        "case_id": "AEGIS-27AB804C",
+        "evidence_type": "PDF",
+        "status": "TAMPERING SUSPECTED",
+        "risk": 60,
+        "timestamp": "10-11-2026 15:39:14"
+    },
+    {
+        "case_id": "AEGIS-9A6158E0",
+        "evidence_type": "PDF",
+        "status": "TAMPERING SUSPECTED",
+        "risk": 60,
+        "timestamp": "10-11-2026 15:39:21"
+    },
+    {
+        "case_id": "AEGIS-1B9BCC03",
+        "evidence_type": "PDF",
+        "status": "TAMPERING SUSPECTED",
+        "risk": 60,
+        "timestamp": "10-11-2026 15:40:03"
+    },
+    {
+        "case_id": "AEGIS-FCD94A77",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "97",
+        "official_mark": 75,
+        "status": "TAMPERING SUSPECTED",
+        "risk": 60,
+        "timestamp": "10-11-2026 15:52:27"
+    },
+    {
+        "case_id": "AEGIS-6A8BF198",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "97",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": false,
+        "status": "TAMPERING SUSPECTED",
+        "risk": 80,
+        "timestamp": "11-11-2026 09:34:35"
+    },
+    {
+        "case_id": "AEGIS-C7E4CCB6",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "75",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": true,
+        "status": "AUTHENTIC",
+        "risk": 0,
+        "timestamp": "11-11-2026 09:36:07"
+    },
+    {
+        "case_id": "AEGIS-5A98701A",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "75",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": true,
+        "signature_valid": false,
+        "status": "AUTHENTIC",
+        "risk": 40,
+        "timestamp": "11-11-2026 21:34:16"
+    },
+    {
+        "case_id": "AEGIS-8B224366",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "75",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": true,
+        "signature_valid": false,
+        "status": "AUTHENTIC",
+        "risk": 40,
+        "timestamp": "11-11-2026 21:35:02"
+    },
+    {
+        "case_id": "AEGIS-4CF8019A",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "7595",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": false,
+        "signature_valid": false,
+        "status": "TAMPERING SUSPECTED",
+        "risk": 120,
+        "timestamp": "11-11-2026 21:35:12"
+    },
+    {
+        "case_id": "AEGIS-E0330FC6",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "75",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": true,
+        "signature_valid": false,
+        "status": "AUTHENTIC",
+        "risk": 40,
+        "timestamp": "11-11-2026 21:35:55"
+    },
+    {
+        "case_id": "AEGIS-1B5F634A",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "75",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": true,
+        "signature_valid": false,
+        "status": "AUTHENTIC",
+        "risk": 40,
+        "timestamp": "11-11-2026 21:43:21"
+    },
+    {
+        "case_id": "AEGIS-3CAE81D1",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "7595",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": false,
+        "signature_valid": false,
+        "status": "TAMPERING SUSPECTED",
+        "risk": 120,
+        "timestamp": "11-11-2026 21:54:22"
+    },
+    {
+        "case_id": "AEGIS-FA8EA461",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "75",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": true,
+        "signature_valid": false,
+        "status": "AUTHENTIC",
+        "risk": 40,
+        "timestamp": "11-11-2026 21:54:41"
+    },
+    {
+        "case_id": "AEGIS-430FF153",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "75",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": true,
+        "signature_valid": true,
+        "status": "AUTHENTIC",
+        "risk": 0,
+        "timestamp": "11-11-2026 22:03:47"
+    },
+    {
+        "case_id": "AEGIS-6B3A711D",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "7595",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": false,
+        "signature_valid": false,
+        "status": "TAMPERING SUSPECTED",
+        "risk": 120,
+        "timestamp": "11-11-2026 22:04:12"
+    },
+    {
+        "case_id": "AEGIS-006C768D",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "75",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": true,
+        "signature_valid": true,
+        "status": "AUTHENTIC",
+        "risk": 0,
+        "timestamp": "11-11-2026 22:04:39"
+    },
+    {
+        "case_id": "AEGIS-C0D5E992",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "75",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": true,
+        "signature_valid": true,
+        "status": "AUTHENTIC",
+        "risk": 0,
+        "timestamp": "12-11-2026 08:39:31"
+    },
+    {
+        "case_id": "AEGIS-F8172C90",
+        "evidence_type": "PDF",
+        "name": "Arun Kumar",
+        "subject": "Maths",
+        "submitted_mark": "7595",
+        "official_mark": 75,
+        "qr_data": {
+            "student": "22CS101",
+            "name": "Arun Kumar",
+            "subject": "Maths",
+            "marks": "75"
+        },
+        "qr_valid": false,
+        "signature_valid": false,
+        "status": "TAMPERING SUSPECTED",
+        "risk": 120,
+        "timestamp": "12-11-2026 08:40:20"
+    }
+]

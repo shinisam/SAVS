@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AEGIS Case History</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            margin:40px;
+            background:#f5f7fb;
+        }
+
+        table{
+
+            width:100%;
+
+            border-collapse:collapse;
+
+            background:white;
+        }
+
+        th, td{
+
+            border:1px solid #ccc;
+
+            padding:10px;
+
+            text-align:left;
+        }
+
+        th{
+            background:#0078D4;
+            color:white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>
+AEGIS Investigation History
+</h1>
+
+<table>
+
+<tr>
+
+<th>Case ID</th>
+
+<th>Evidence Type</th>
+
+<th>Status</th>
+
+<th>Risk</th>
+
+<th>Timestamp</th>
+
+</tr>
+
+{% for case in cases %}
+
+<tr>
+
+<td>
+
+<a href="/case/{{ case.case_id }}">
+
+{{ case.case_id }}
+
+</a>
+
+</td>
+
+<td>{{ case.evidence_type }}</td>
+
+<td>{{ case.status }}</td>
+
+<td>{{ case.risk }}</td>
+
+<td>{{ case.timestamp }}</td>
+
+</tr>
+
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">
+
+<button type="button">
+
+Back To Dashboard
+
+</button>
+
+</a>
+</body>
+
+</html>
